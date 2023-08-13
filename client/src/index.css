@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "my-font";
+  src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+:root {
+  --cl1: cyan;
+  --cl2: purple;
+}
+
+* {
+  font-family: "my-font" !important;
+}
+
+.resaltar {
+  background: linear-gradient(to top left, var(--cl1), var(--cl2));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.toTop {
+  animation: toTop 0.5s forwards;
+}
+
+@keyframes toTop {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
